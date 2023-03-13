@@ -4,7 +4,8 @@ import {
 Box,
 Button,
 Tooltip,
-Typography
+Typography,
+Container
 
 
 } from '@mui/material';
@@ -16,8 +17,6 @@ import AttachEmailIcon from '@mui/icons-material/AttachEmail';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import CallIcon from '@mui/icons-material/Call';
 import MessageIcon from '@mui/icons-material/Message';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import FaxIcon from '@mui/icons-material/Fax';
 
 
 
@@ -26,7 +25,7 @@ export default function ContactMeCard() {
 
   return (
 
-    <ContentWrapper>
+    <WrapperContainer>
         <TopBox>
             <AvatarImage />
             <Username>KHALID</Username>
@@ -58,13 +57,13 @@ export default function ContactMeCard() {
               </Typography>
             </DetailsBox>
         </BottomBox>
-    </ContentWrapper>
+    </WrapperContainer>
   );
 }
 
 
 
-const ContentWrapper = styled(Box)({
+const WrapperContainer = styled(Container)({
   width: '100%',
   display: 'flex',
   flexDirection:'column',

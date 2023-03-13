@@ -9,9 +9,8 @@ useMediaQuery,
 
 } from '@mui/material';
 
-import ContactMeCard from '../Cards/ContacMe';
-import ContactMeForm from '../Forms/ContactMe';
-import CustomButton from './../../components/Styled/CustomButton'
+import HireMeForm from '../Forms/HireMeForm';
+import CustomButton from '../Styled/CustomButton'
 import { styled } from '@mui/material/styles';
 
 
@@ -36,7 +35,7 @@ export default function ContactMeModal() {
 
     <>
       <CustomButton handleClick={handleOpenModal}>
-            Contact Me
+          Hire Me
       </CustomButton>
     
  
@@ -44,9 +43,7 @@ export default function ContactMeModal() {
       <CustomDialog fullScreen={fullScreen} fullWidth maxWidth="md" open={open} onClose={handleCloseModal}>
           <ContentWrapper>
             <CustomDialogContent>
-              <ContactMeCard />
-              <ContactMeForm />
-         
+                <HireMeForm />
             </CustomDialogContent>
           </ContentWrapper>
       </CustomDialog>

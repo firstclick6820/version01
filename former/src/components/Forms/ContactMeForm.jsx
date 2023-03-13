@@ -46,6 +46,9 @@ function ContactMeForm() {
 
   return (
     <WrapperContainer>
+        <Box display="flex" justifyContent="center" alignItems="center">
+            <ContactMe>Contact Me</ContactMe>
+        </Box>
 
         <Formik onSubmit={handleFormSubmit}
                 initialValues={initialValues}
@@ -266,6 +269,18 @@ const SuccessMessage = styled(Typography)({
   fontWeight: 900,
   marginTop: '1em',
   fontSize: '1.5em',
+  color:'#FCE4EC',
+
+})
+
+
+const ContactMe = styled(Typography)({
+  fontWeight: 900,
+  lineHeight:'2rem',
+  fontSize: '1.5rem',
+  letterSpacing: '2px',
+  textTransform: 'uppercase',
+  opacity: 0.5,
   color:'#FCE4EC',
 
 })

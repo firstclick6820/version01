@@ -7,26 +7,26 @@ from '@mui/material'
 import { styled } from '@mui/material/styles';
 
 
-
-
-// Import Custom Components
-import SocialMedia from '../components/SocialMedia'
-import Profile from '../components/Profile'
+// import Custom Components
+import WorkExperienceCard from './../components/Cards/WorkExperienceCard'
 
 
 
 
 
-const Home = () => {
+const WorkExperiences = () => {
   return (
     <PageWrapper>
-        <SocialMedia />
-        <Profile />
+        <WorkExperienceCard />
     </PageWrapper>
   )
 }
 
-export default Home
+export default WorkExperiences
+
+
+
+
 
 
 

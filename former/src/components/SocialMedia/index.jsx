@@ -31,6 +31,11 @@ const links = {
 
 
 const index = () => {
+
+
+
+
+  
   return (
     <WrapperContianer>
 
@@ -84,7 +89,7 @@ const SingleNavLink = styled(Button)({
   '&:before':{
     content: "''",
     transition:'all 0.3s ease-in-out',
-    boxShadow: 'linear-gradient(120deg,transparent,rgba(237, 33, 58, 0.4),transparent)',
+    // boxShadow: 'linear-gradient(120deg,transparent,rgba(237, 33, 58, 0.4),transparent)',
   },
     color: '#FFEBEE',
     cursor: 'pointer',
@@ -95,7 +100,7 @@ const SingleNavLink = styled(Button)({
     transition: 'all 0.3s ease-in-out',
     borderRadius: '50%',
     '&:hover': {
-      scale: '1.28',
-      boxShadow: '1px 1px 10px 6px rgba(237, 33, 58, 0.4)',
+      scale: '1.24',
+      // boxShadow: '1px 1px 10px 6px rgba(237, 33, 58, 0.4)',
     }
 })

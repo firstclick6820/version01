@@ -3,6 +3,7 @@ import {
     Button,
     Box,
     Typography,
+    Container,
     Divider,
 }
 from '@mui/material'
@@ -10,9 +11,15 @@ from '@mui/material'
 import { styled } from '@mui/material/styles';
 
 
+
+// import Images
 import Profile from './../../assets/images/profile.jpg'
-import ContactMeModal from '../Modals/ContactMe';
-import HireMeModal from '../Modals/HireMe';
+
+// import modals
+import ContactMeModal from '../Modals/ContactMeModal';
+import HireMeModal from '../Modals/HireMeModal';
+
+
 
 
 
@@ -45,7 +52,7 @@ export default index
 
 
 
-const WrapperContianer = styled(Box)({
+const WrapperContianer = styled(Container)({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
