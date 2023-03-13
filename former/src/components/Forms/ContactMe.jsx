@@ -6,10 +6,10 @@ import * as yup from "yup";
 import {
   Box, 
   TextField,
-  Typography,
   FormControl,
   FormLabel,
-  Button
+  Button,
+  Typography
 
 
 
@@ -17,14 +17,29 @@ import {
 
 import { styled } from '@mui/material/styles';
 
-
+import emailjs from '@emailjs/browser';
+import { useRef, useState } from 'react';
 
 
 
 function ContactMeForm() {
+    const form = useRef()
+    const [messageSent, setMessageSent] = useState(false)
 
-    const handleFormSubmit = () => {
-        console.log('working')
+
+    const handleFormSubmit = (values,{ resetForm }) => {
+    
+        emailjs.sendForm('service_o3j0sjh', 'template_x2wpb6i', form.current, 'W7nDObKvKP2OODXLn')
+        .then((result) => {
+            setMessageSent(true)
+            resetForm()
+            setTimeout(() => {
+              setMessageSent(false);
+            }, 3000);
+
+        }, (error) => {
+            setMessageSent(false)
+        });
     }
 
 
@@ -43,19 +58,19 @@ function ContactMeForm() {
                     handleChange,
                     handleSubmit,
                   }) => (
-                    <FormBox component="form" noValidate autoComplete="off" onSubmit={handleSubmit}>
+                    <FormBox ref={form} component="form" noValidate autoComplete="off" onSubmit={handleSubmit}>
                         <FormControl fullWidth>
                             <CustomFormLabel>Fullname</CustomFormLabel>
                             <CustomTextInput
                                     required
-                                    name='fullname'
+                                    name='name'
                                     type="text"
-                                    placeholder="Mohammad Khalid Momand"
+                                    placeholder="Mohammad"
                                     onBlur={handleBlur}
                                     onChange={handleChange}
-                                    value={values.fullname}
-                                    error={!!touched.fullname && !!errors.fullname}
-                                    helperText={touched.fullname && errors.fullname}/>
+                                    value={values.name}
+                                    error={!!touched.name && !!errors.name}
+                                    helperText={touched.name && errors.name}/>
                         </FormControl>
 
                         <FormControl fullWidth>
@@ -64,14 +79,13 @@ function ContactMeForm() {
                                         required
                                         name="mobile"
                                         type="text"
-                                        placeholder='+971-52754-6685'
+                                        placeholder='00971-52754-6685'
                                         onBlur={handleBlur}
                                         onChange={handleChange}
                                         value={values.mobile}
                                         error={!!touched.mobile && !!errors.mobile}
                                         helperText={touched.mobile && errors.mobile}/>
                         </FormControl>
-
 
 
                         <FormControl fullWidth>
@@ -94,7 +108,7 @@ function ContactMeForm() {
                             <CustomTextInput
                                         multiline
                                         required
-                                        rows={5}
+                                        rows={4}
                                         name="message"
                                         placeholder='Your message ...'
                                         type="text"
@@ -106,7 +120,26 @@ function ContactMeForm() {
                         </FormControl>
                      
 
-                        <CustomButton>Send Message</CustomButton>
+                        {(
+                          Object.keys(errors).length === 0 
+                          && values.name
+                          && values.email
+                          && values.mobile
+                          && values.message ) && 
+                            <CustomButton disabled={
+                                              !values.name ||
+                                              !values.mobile ||
+                                              !values.email ||
+                                              !values.message || 
+                                              Object.keys(errors).length > 0 } 
+                                          type="submit">
+                                Send Message 
+                            </CustomButton>
+                        }
+
+                        {messageSent && <SuccessMessage>Message Sent successfully</SuccessMessage>}
+
+      
                     </FormBox>
                 )}
         </Formik>
@@ -128,18 +161,17 @@ export default ContactMeForm;
 
 const checkoutSchema = yup.object().shape({
 
-    fullname: yup
+    name: yup
                 .string()
                 .required("Required!")
                 .min(6, "Should not be less then 6 characters.")
-                .max(20, "Should not be more then 20 characters."),
+                .max(30, "Should not be more then 30 characters."),
 
     mobile:  yup 
                 .string()
                 .required("Required!")
-                .min(10, "Should not be less than 10 characters.")
-                .max(14, "Should not be more than 14 characters.")
-                .matches(/^[0-9]{10,14}$/, "Invalid Format"),
+                .matches(/^(00971)-\d{5}-\d{4}$/, 'Accepted Format 00971-XXXXX-XXXX'),
+
     email:     yup
                .string()
                .email('Invalid Format')
@@ -156,7 +188,7 @@ const checkoutSchema = yup.object().shape({
 });
 
 const initialValues = {
-  fullname: "",
+  name: "",
   email: "",
   mobile: "",
   message: "",
@@ -218,11 +250,22 @@ const CustomButton = styled(Button)({
     width: '100%',
     marginTop: '0.5em',
     color: 'red',
+    padding: '1em 0 1em 0',
     boxShadow: 'rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;',
     transition: 'all 0.3s ease-in-out',
     cursor: 'pointer',
     background: 'linear-gradient(to bottom, #EBDCC9, #fff)',
     '&:hover': {
-      background: 'white'
+      background: 'linear-gradient(to bottom, #fff, #EBDCC9)',
+      scale: '1.01'
     }
+})
+
+
+const SuccessMessage = styled(Typography)({
+  fontWeight: 900,
+  marginTop: '1em',
+  fontSize: '1.5em',
+  color:'#FCE4EC',
+
 })
