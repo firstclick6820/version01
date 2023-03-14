@@ -15,7 +15,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
 import CardMembershipIcon from '@mui/icons-material/CardMembership';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
-
+import CastForEducationIcon from '@mui/icons-material/CastForEducation';
 
 const Navbar = () => {
 
@@ -42,13 +42,17 @@ const Navbar = () => {
               <WorkHistoryIcon />
           </NavButton>
 
+          <NavButton to="/skills" activelink={activeNav} onClick={() => handleClick("/skills")}>
+              <CastForEducationIcon />
+          </NavButton>
+
           <NavButton to="/certificates" activelink={activeNav} onClick={() => handleClick("/certificates")}>
               <WorkspacePremiumIcon />
           </NavButton>
 
-          <NavButton to="/certifications" activelink={activeNav} onClick={() => handleClick("/certifications")}>
-              <CardMembershipIcon />
-          </NavButton>
+          
+
+
 
 
       </CustomAppBar>

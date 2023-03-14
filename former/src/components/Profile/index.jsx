@@ -4,6 +4,7 @@ import {
     Box,
     Typography,
     Container,
+    Grid,
     Divider,
 }
 from '@mui/material'
@@ -18,7 +19,8 @@ import Profile from './../../assets/images/profile.jpg'
 // import modals
 import ContactMeModal from '../Modals/ContactMeModal';
 import HireMeModal from '../Modals/HireMeModal';
-import Downloads from '../Modals/Downloads';
+import Downloads from '../Modals/DownloadsModal';
+import BasicInfoModal from '../Modals/BasicInfoModal'
 
 
 import SocialMedia from './../SocialMedia'
@@ -39,11 +41,24 @@ const index = () => {
         
         <SocialMedia />
 
-        <Box display="flex" justifyContent="space-between" alignItems="center" gap={2} mt={4}>
-            <HireMeModal />
-            <ContactMeModal />
-            <Downloads />
-        </Box>
+        <Grid container gap={1} justifyContent="center" alignItems="center">
+
+            <Grid item xs={6} sm={3} md={2}>
+                <HireMeModal />
+            </Grid>
+
+            <Grid item xs={6} sm={3} md={2}>
+                <ContactMeModal />
+            </Grid>
+
+            <Grid item xs={6} sm={3} md={2}>
+                <Downloads />
+            </Grid>
+            
+            
+            
+        </Grid>
+
 
 
     </WrapperContianer>

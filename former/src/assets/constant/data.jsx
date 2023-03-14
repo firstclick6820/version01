@@ -1,5 +1,14 @@
 
 
+import EmojiObjectsIcon from '@mui/icons-material/EmojiObjects';
+import BugReportIcon from '@mui/icons-material/BugReport';
+import CompressIcon from '@mui/icons-material/Compress';
+import Diversity3Icon from '@mui/icons-material/Diversity3';
+import HourglassBottomIcon from '@mui/icons-material/HourglassBottom';
+
+
+
+
 
 export const works = [
     {
@@ -180,3 +189,63 @@ export const remarks = [
 
     {title: 'How can I help?', description: 'As a self-taught programmer, full-stack web developer, digital marketing specialist, and GUI app designer, I bring a versatile skillset to the table. I am equipped to offer both freelance project completions and full-time or contractual work with companies. With my extensive experience and passion for innovation, I am confident in my ability to provide cutting-edge solutions and exceed expectations. I am excited to collaborate with organizations that share my commitment to excellence and drive to make an impact in the industry.'},
 ]
+
+
+export const softSkills = [
+  {
+    name: 'Problem Solving',
+    icon: <BugReportIcon sx={{ fontSize: '2em' }} />,
+  },
+  {
+    name: 'Critical Thinking',
+    icon: <EmojiObjectsIcon sx={{ fontSize: '2em' }} />,
+  },
+  {
+    name: 'Working Underpressure',
+    icon: <CompressIcon sx={{ fontSize: '2em' }} />,
+  },
+  {
+    name: 'Time Management',
+    icon: <Diversity3Icon sx={{ fontSize: '2em' }} />,
+  },
+  {
+    name: 'Team Work',
+    icon: <HourglassBottomIcon sx={{ fontSize: '2em' }} />,
+  },
+];
+
+
+
+export const frontendSkills = [
+    {
+        name: 'HTML5',
+        icon: <EmojiObjectsIcon sx={{ fontSize: '2em' }} />,
+    },
+    {
+      name: 'CSS3 || Bootstrap || Bulma || Tailwind || MUI',
+      icon: <BugReportIcon sx={{ fontSize: '2em' }} />,
+    },
+    {
+      name: 'JavaScript || React || React Native || JQuery || Vue JS',
+      icon: <BugReportIcon sx={{ fontSize: '2em' }} />,
+    },
+    {
+      name: 'JavaScript || React || React Native || JQuery || Vue JS',
+      icon: <BugReportIcon sx={{ fontSize: '2em' }} />,
+    }
+  ];
+  
+
+
+  
+export const backendSkills = [
+    {
+      name: 'Problem Solving',
+      icon: <BugReportIcon sx={{ fontSize: '2em' }} />,
+    },
+    {
+      name: 'Critical Thinking',
+      icon: <EmojiObjectsIcon sx={{ fontSize: '2em' }} />,
+    },
+  ];
+  

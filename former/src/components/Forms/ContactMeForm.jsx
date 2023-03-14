@@ -46,8 +46,8 @@ function ContactMeForm() {
 
   return (
     <WrapperContainer>
-        <Box display="flex" justifyContent="center" alignItems="center">
-            <ContactMe>Contact Me</ContactMe>
+        <Box display="flex" justifyContent="center" alignItems="center" mb={2}>
+            <ContactMe>Leave A Message</ContactMe>
         </Box>
 
         <Formik onSubmit={handleFormSubmit}
@@ -282,5 +282,10 @@ const ContactMe = styled(Typography)({
   textTransform: 'uppercase',
   opacity: 0.5,
   color:'#FCE4EC',
+  fontFamily: 'Montserrat',
+  opacity: '0.8',
+  '&:hover': {
+    opacity: '1'
+  }
 
 })

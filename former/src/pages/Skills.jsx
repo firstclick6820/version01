@@ -7,22 +7,22 @@ from '@mui/material'
 import { styled } from '@mui/material/styles';
 
 
-// import Custom Components
-import WorkExperienceCard from './../components/Cards/WorkExperienceCard'
+import SkillsTabs from './../components/Tabs/SkillsTab'
 
 
 
 
-
-const WorkExperiences = () => {
+const Skills = () => {
   return (
     <PageWrapper>
-        <WorkExperienceCard />
+        <Container>
+            <SkillsTabs />
+        </Container>
     </PageWrapper>
   )
 }
 
-export default WorkExperiences
+export default Skills
 
 
 
@@ -34,15 +34,11 @@ export default WorkExperiences
 
 
 const PageWrapper = styled(Box)({
-    paddingTop:'6rem',
+    paddingTop:'10rem',
     width: '100%',
     height: '100vh',
     backgroundImage: ' linear-gradient(to top, #870000, #190a05)',
     color: '#FFEBEE',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent:"center",
-    alignItems: 'center',
     gap: '2em',
 })
 
