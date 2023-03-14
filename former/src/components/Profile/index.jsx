@@ -63,11 +63,6 @@ const WrapperContianer = styled(Container)({
 
 
 const ImageBox = styled(Box)({
-    '&:before':{
-        content: "''",
-        transition:'all 0.3s ease-in-out',
-        boxShadow: 'linear-gradient(120deg,transparent,rgba(237, 33, 58, 0.4),transparent)',
-    },
     position: 'relative',
     width: '200px',
     height: '200px',
@@ -76,10 +71,12 @@ const ImageBox = styled(Box)({
     margin: '0 0 1em 0',
     boxShadow: 'rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;',
     cursor: 'pointer',
+    transform: 'scale(1.05)',
     transition: 'all 0.3s ease-in-out',
+    touchAction: 'manipulation',
     '&:hover': {
-        scale: '1.02',
-        boxShadow: '1px 1px 25px 10px rgba(237, 33, 58, 0.4)',
+        transform: 'scale(1.02)',
+        boxShadow: '1px 1px 25px 10px rgba(27, 33, 158, 0.4)',
     }
 })
 

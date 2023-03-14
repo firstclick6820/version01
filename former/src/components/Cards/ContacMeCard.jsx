@@ -71,6 +71,7 @@ const WrapperContainer = styled(Container)({
   alignItems: 'center',
   gap:'1.3rem',
 
+
   
 })
 
@@ -96,9 +97,15 @@ const MiddleBox = styled(Box)({
 
 // Bottom Box
 const BottomBox = styled(Box)({
+    cursor: "pointer",
     width: '100%',
     display: 'flex',
     alignItems: 'center',
+    transform: 'scale(1)',
+    transition: 'all 0.3s ease-in-out',
+    '&:hover': {
+      transform: 'scale(1.02)'
+    }
 })
 
 
@@ -117,9 +124,10 @@ const SingleNavLink = styled(Button)({
     boxShadow: `rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px`,
     backgroundImage: 'linear-gradient(to bottom, #ed213a, black)',
     transition: 'all 0.3s ease-in-out',
+    transform: 'scale(1)',
     borderRadius: '50%',
     '&:hover': {
-      scale: '1.28',
+      transform: 'scale(1.28)',
       boxShadow: '1px 1px 10px 6px rgba(237, 33, 58, 0.4)',
     }
 })

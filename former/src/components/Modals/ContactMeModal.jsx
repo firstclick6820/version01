@@ -71,6 +71,8 @@ const ContentWrapper = styled(Box)({
   
 })
 
+
+
 const CustomDialogContent = styled(DialogContent)({
   display: 'grid',
   gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',

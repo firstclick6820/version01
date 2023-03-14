@@ -77,30 +77,45 @@ const WrapperContianer = styled(Box)({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    gap:'0.8em',
+    gap:'.2em',
 
 
 })
 
 
 
-// Single Nav Link Customization
+// // Single Nav Link Customization
+// const SingleNavLink = styled(Button)({
+//     color: '#FFEBEE',
+//     cursor: 'pointer',
+//     minWidth: '45px',
+//     padding: '1em',
+//     boxShadow: `rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px`,
+//     backgroundImage: 'linear-gradient(to bottom, #ed213a, black)',
+//     transition: 'all 0.3s ease-in-out',
+//     borderRadius: '50%',
+//     backdropFilter: 'blur(5px)',
+//     transform: 'scale(0.70)',
+//     '&:hover': {
+//       transform: 'scale(1.24)',
+//     }
+// })
+
+
 const SingleNavLink = styled(Button)({
-  '&:before':{
-    content: "''",
-    transition:'all 0.3s ease-in-out',
-    // boxShadow: 'linear-gradient(120deg,transparent,rgba(237, 33, 58, 0.4),transparent)',
+  color: '#FFEBEE',
+  cursor: 'pointer',
+  minWidth: '45px',
+  padding: '1em',
+  boxShadow: `rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px`,
+  backgroundImage: 'linear-gradient(to bottom, #ed213a, black)',
+  transition: 'all 0.3s ease-in-out',
+  borderRadius: '50%',
+  backdropFilter: 'blur(5px)',
+  transform: 'scale(0.70)',
+  touchAction: 'manipulation', // Add touch-action property
+  '&:hover,&:focus': {
+    transform: 'scale(1.24)',
   },
-    color: '#FFEBEE',
-    cursor: 'pointer',
-    minWidth: '45px',
-    padding: '1em',
-    boxShadow: `rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px`,
-    backgroundImage: 'linear-gradient(to bottom, #ed213a, black)',
-    transition: 'all 0.3s ease-in-out',
-    borderRadius: '50%',
-    '&:hover': {
-      scale: '1.24',
-      // boxShadow: '1px 1px 10px 6px rgba(237, 33, 58, 0.4)',
-    }
-})
+  
+});

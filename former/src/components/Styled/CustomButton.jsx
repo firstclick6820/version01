@@ -54,10 +54,11 @@ const DesignedButton = styled(Button)({
     padding: '0.5rem 2rem',
     color: '#FFEBEE',
     textTransform:'uppercase',
+    transform:'scale(1)',
     transition: 'all 0.3s ease-in-out',
-    '&:hover': {
+    '&:hover, &:focus': {
         boxShadow: '1px 1px 25px 10px rgba(237, 33, 58, 0.4)',
-        scale: '1.03'
+        transform:'scale(1.05)',
     }
     
 })
