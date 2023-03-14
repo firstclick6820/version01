@@ -43,7 +43,7 @@ const ContentWrapper = styled(Box)({
   flexDirection:'column',
   justifyContent: 'space-between',
   alignItems: 'center',
-  gap:'1.3rem',
+  gap:'1rem',
 
   
 })
@@ -55,7 +55,6 @@ const TopBox = styled(Box)({
   justifyContent: 'center',
   flexDirection:'column',
   alignItems:'center',
-  gap: '0.5em'
 
 })
 
@@ -84,7 +83,11 @@ const Title = styled(Typography)({
 
 const Description = styled(Typography)({
     letterSpacing: '2px',
-    lineHeight: '2em'
+    lineHeight: '1.4em',
+    fontFamily: 'Poppins',
+    fontWeight: '400',
+    opacity:0.5,
+
 })
 
 
@@ -92,7 +95,7 @@ const Description = styled(Typography)({
 // Bottom Box Item
 const DetailsBox = styled(Box)({
     borderRadius: '1rem',
-    backgroundImage:'linear-gradient(to bottom, #ed213a, black)',
+    background: 'linear-gradient(to bottom, #fff, #EBDCC9)',
     boxShadow: 'rgba(237, 33, 58, 0.3) 0px 19px 38px, rgba(237, 33, 58, 0.22) 0px 15px 12px;',
     Width: '100%',
     minHeight: '100%',
@@ -100,7 +103,6 @@ const DetailsBox = styled(Box)({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'center',
-    textAlign: 'center',
-    color: 'white'
+    textAlign:'center',
+    color: '#090909'
 })

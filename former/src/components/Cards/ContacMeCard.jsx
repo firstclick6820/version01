@@ -5,7 +5,8 @@ Box,
 Button,
 Tooltip,
 Typography,
-Container
+Container,
+Grid
 
 
 } from '@mui/material';
@@ -17,8 +18,8 @@ import AttachEmailIcon from '@mui/icons-material/AttachEmail';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import CallIcon from '@mui/icons-material/Call';
 import MessageIcon from '@mui/icons-material/Message';
-
-
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import RssFeedIcon from '@mui/icons-material/RssFeed';
 
 export default function ContactMeCard() {
 
@@ -51,11 +52,67 @@ export default function ContactMeCard() {
         </MiddleBox>
 
         <BottomBox>
-            <DetailsBox>
-              <Typography>
-              Results-oriented and Energetic professional with 7 years of experience and proven knowledge of Cost Management, General Accountant, Business Administration, Production, and Business Operations.  Apart from my Professional career, I am a self-taught Python Developer, Web Developer, Digital Marketing specialist, and GUI designer.
-              </Typography>
-            </DetailsBox>
+
+            <BottomBoxGrid container spacing={0}>
+                <IconBox item sm={2} >
+                    <LocationOnIcon  sx={{color: '#FFD740', fontWeight: 900, fontSize: '2em'}}/>
+                </IconBox>
+
+                <Grid item sm={10}>
+                  <SingleRow>
+                    <Title>Address</Title>
+                    <SubTitle>101, Naimyia Tower, Ajman, UAE.</SubTitle>
+                  </SingleRow>
+                </Grid>
+            </BottomBoxGrid>
+
+
+            <BottomBoxGrid container spacing={0}>
+                <IconBox item sm={2} >
+                    <CallIcon  sx={{color: '#FFD740', fontWeight: 900, fontSize: '2em'}}/>
+                </IconBox>
+
+                <Grid item sm={10}>
+                  <SingleRow>
+                    <Title>Mobile</Title>
+                    <SubTitle>+971-52754-6685 </SubTitle>
+                  </SingleRow>
+                </Grid>
+            </BottomBoxGrid>
+
+
+            
+
+            <BottomBoxGrid container spacing={0}>
+                <IconBox item  sm={2} >
+                    <AttachEmailIcon  sx={{color: '#FFD740', fontWeight: 900, fontSize: '2em'}}/>
+                </IconBox>
+
+                <Grid item  sm={10}>
+                  <SingleRow>
+                    <Title>Email</Title>
+                    <SubTitle>mohammadkhalidmomand@gmail.com</SubTitle>
+                  </SingleRow>
+                </Grid>
+            </BottomBoxGrid>
+
+
+            
+
+            <BottomBoxGrid container spacing={0}>
+                <IconBox item sm={2} >
+                    <RssFeedIcon  sx={{color: '#FFD740', fontWeight: 900, fontSize: '2em'}}/>
+                </IconBox>
+
+                <Grid item sm={10}>
+                  <SingleRow>
+                    <Title>Website</Title>
+                    <SubTitle>www.mkm-resume.onrender.com</SubTitle>
+                  </SingleRow>
+                </Grid>
+            </BottomBoxGrid>
+
+  
         </BottomBox>
     </WrapperContainer>
   );
@@ -68,11 +125,7 @@ const WrapperContainer = styled(Container)({
   display: 'flex',
   flexDirection:'column',
   justifyContent: 'space-between',
-  alignItems: 'center',
-  gap:'1.3rem',
-
-
-  
+  gap:'1.3rem',  
 })
 
 
@@ -90,6 +143,7 @@ const TopBox = styled(Box)({
 const MiddleBox = styled(Box)({
     display: 'flex',
     justifyContent: 'center',
+    alignItems: 'center',
     gap: '1rem'
 })
 
@@ -100,12 +154,24 @@ const BottomBox = styled(Box)({
     cursor: "pointer",
     width: '100%',
     display: 'flex',
-    alignItems: 'center',
-    transform: 'scale(1)',
-    transition: 'all 0.3s ease-in-out',
-    '&:hover': {
-      transform: 'scale(1.02)'
-    }
+    flexDirection:'column',
+    justifyContent: 'flex-start',
+    gap: '0.5em',
+   
+
+})
+
+const BottomBoxGrid = styled(Grid)({
+  width: '100%',
+  border: '1px solid orange',
+  borderRadius: '0.5em',
+  transition: 'all 0.3s ease-in-out',
+  touchAction: 'manipulation',
+  '&:hover': {
+    border: '1px solid #FFEBEE'
+  },
+  backgroundImage: 'linear-gradient(to top, #ed213a, black)',
+  boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',
 })
 
 
@@ -160,18 +226,45 @@ const Username = styled(Typography)({
 
 
 
-// Bottom Box Item
-const DetailsBox = styled(Box)({
-    borderRadius: '1rem',
-    backgroundImage:'linear-gradient(to bottom, #ed213a, black)',
-    boxShadow: 'rgba(237, 33, 58, 0.3) 0px 19px 38px, rgba(237, 33, 58, 0.22) 0px 15px 12px;',
-    Width: '100%',
-    minHeight: '100%',
-    padding: '1rem',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    textAlign: 'center',
-    color: 'white'
+
+const IconBox = styled(Grid)({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  textAlign: 'center',
+})
+
+
+const SingleRow = styled(Box)({
+  width: '100%',
+  display: 'flex',
+  flexDirection:'column',
+  justifyContent: 'center',
+  borderRadius: '0.2em',
+  padding: '0.5em',
+  touchAction: 'manipulation',
+  '&:hover': {
+    transform: "scale(1.02)"
+  }
+
+})
+
+const Title = styled(Typography)({
+  fontWeight: 900,
+  fontFamily: 'Montserrat',
+  fontSize: '1.5em',
+  letterSpacing: '1px',
+  color: '#FFEBEE',
+  opacity: '0.8',
+  '&:hover': {
+    opacity: '1'
+  }
+})
+
+
+const SubTitle =styled(Typography)({
+  fontWeight: 500,
+  fontSize: '0.8em',
+  color: '#FBE9E7',
+  letterSpacing:'0.5px'
 })

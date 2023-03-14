@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Box } from '@mui/material';
+import { Container, Box , useMediaQuery} from '@mui/material';
 import { styled } from '@mui/material/styles';
 import Slider from 'react-slick';
 
@@ -12,6 +12,11 @@ import { works } from '../assets/constant/data';
 
 const Certificates = () => {
 
+  const isLargeScreen = useMediaQuery('(min-width: 1024px)');
+  const isMediumScreen = useMediaQuery('(min-width: 768px) and (max-width: 1023px)');
+  const isSmallScreen = useMediaQuery('(max-width: 767px)');
+  const slidesToShow = isLargeScreen ? 3 : (isMediumScreen ? 2 : 1);
+
 
   const settings = {
     initialSlide: 0,
@@ -19,12 +24,11 @@ const Certificates = () => {
     infinite: true,
     speed: 1000,
     autoplay: true,
-    slidesToShow: 3,
+    slidesToShow: slidesToShow, // set the slidesToShow value
     slidesToScroll: 1,
     focusOnSelect: true,
     touchMove: true,
     autoplaySpeed: 4000,
-    
   };
 
   return (
@@ -40,6 +44,7 @@ const Certificates = () => {
     </PageWrapper>
   );
 };
+
 
 
 

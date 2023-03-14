@@ -167,3 +167,16 @@ export const backend_experience = [
 
 ]
 
+
+
+
+export const remarks = [
+    {title: 'About Me', description: 'As an accomplished professional with 7 years of experience, I possess a robust skillset in areas such as cost management, general accounting, business administration, production, and business operations. Additionally, my passion for continuous learning has led me to acquire expertise as a self-taught Python programmer, full-stack web developer, digital marketing specialist, and GUI designer. I am committed to delivering exceptional results and contributing to the growth and success of any organization I am associated with.'},
+
+    {title: 'Who Am I ?', description: `My name is Mohammad Khalid Momand, and I am a professional based in the United Arab Emirates. Originally from Afghanistan, I completed my primary and higher education at Pohand Abdul Hai Habibi High School in Khost Province. Following graduation, I embarked on a self-taught journey to become proficient in coding.
+
+    Over the past seven years, I have been living and working in the UAE, honing my skills and gaining valuable experience by working with various companies. Throughout my career, I have developed a strong foundation in coding and programming, as well as in other areas such as project management and team collaboration.`},
+
+
+    {title: 'How can I help?', description: 'As a self-taught programmer, full-stack web developer, digital marketing specialist, and GUI app designer, I bring a versatile skillset to the table. I am equipped to offer both freelance project completions and full-time or contractual work with companies. With my extensive experience and passion for innovation, I am confident in my ability to provide cutting-edge solutions and exceed expectations. I am excited to collaborate with organizations that share my commitment to excellence and drive to make an impact in the industry.'},
+]

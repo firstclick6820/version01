@@ -18,9 +18,10 @@ import Profile from './../../assets/images/profile.jpg'
 // import modals
 import ContactMeModal from '../Modals/ContactMeModal';
 import HireMeModal from '../Modals/HireMeModal';
+import Downloads from '../Modals/Downloads';
 
 
-
+import SocialMedia from './../SocialMedia'
 
 
 const index = () => {
@@ -33,13 +34,15 @@ const index = () => {
      
         <DetailsBox>
             <Username>Mohammad Khalid Momand</Username>
-            <UserJob>Software Engineer || Web Developer</UserJob>
+            <UserJob>Software Engineer || Full-Stack Web Developer</UserJob>
         </DetailsBox>
         
+        <SocialMedia />
 
         <Box display="flex" justifyContent="space-between" alignItems="center" gap={2} mt={4}>
             <HireMeModal />
             <ContactMeModal />
+            <Downloads />
         </Box>
 
 
@@ -57,7 +60,7 @@ const WrapperContianer = styled(Container)({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    gap:'0.2em',
+    gap:'1em',
     textAlign: 'center'
 })
 

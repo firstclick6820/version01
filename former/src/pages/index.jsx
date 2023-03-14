@@ -4,7 +4,7 @@ import {Routes, Route} from 'react-router-dom'
 
 
 // import pages
-import Home from './Home'
+import ProfilePage from './ProfilePage'
 import WorkExperiences from './WorkExperiences'
 import Certificates from './Certificates'
 
@@ -14,7 +14,7 @@ import Certificates from './Certificates'
 const index = () => {
   return (
     <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route exact path="/" element={<ProfilePage />} />
         <Route exact path="/work-experiences" element={<WorkExperiences />} />
         <Route exact path="/certificates" element={<Certificates />} />
     </Routes>

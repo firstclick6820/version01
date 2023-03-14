@@ -235,7 +235,7 @@ const CustomTextInput = styled(TextField)({
         "& > fieldset": {
         border: "none"
         }
-    }
+    },
 })
 
 

@@ -17,16 +17,15 @@ import Profile from '../components/Profile'
 
 
 
-const Home = () => {
+const ProfilePage = () => {
   return (
     <PageWrapper>
-        <SocialMedia />
         <Profile />
     </PageWrapper>
   )
 }
 
-export default Home
+export default ProfilePage
 
 
 

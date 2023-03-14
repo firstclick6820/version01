@@ -50,7 +50,7 @@ const DesignedButton = styled(Button)({
     width: '100%',
     borderRadius: '1rem',
     boxShadow: 'rgb(38, 57, 77) 0px 20px 30px -10px',
-    fontSize: '1rem',
+    fontSize: '0.8rem',
     padding: '0.5rem 2rem',
     color: '#FFEBEE',
     textTransform:'uppercase',
