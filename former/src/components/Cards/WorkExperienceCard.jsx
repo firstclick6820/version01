@@ -49,6 +49,7 @@ export default WorkExperienceCard
 const WrapperContainer = styled(Container)({
   width: '95%',
   height: 'max-content',
+  minHeight:'60vh',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-between',

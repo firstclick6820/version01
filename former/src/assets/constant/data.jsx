@@ -215,6 +215,26 @@ export const softSkills = [
 ];
 
 
+export const generalSkills = [
+    {
+      name: 'OS || MS Windows || Linux || MAC OS',
+      icon: <BugReportIcon sx={{ fontSize: '2em' }} />,
+    },
+    {
+      name: 'Microsoft Office || Ms Word || Ms PP || MS Excel || MS Team',
+      icon: <EmojiObjectsIcon sx={{ fontSize: '2em' }} />,
+    },
+    {
+      name: 'Tally Accounting Soft || TDL || Quick Books',
+      icon: <CompressIcon sx={{ fontSize: '2em' }} />,
+    },
+    {
+      name: 'Designing || Photoshop || Corel Draw || Illustrator || Audition || After Effect || Premire',
+      icon: <Diversity3Icon sx={{ fontSize: '2em' }} />,
+    },
+  ];
+  
+
 
 export const frontendSkills = [
     {
@@ -240,11 +260,20 @@ export const frontendSkills = [
   
 export const backendSkills = [
     {
-      name: 'Problem Solving',
+      name: 'Python || Django || PyQt5 || Flask ',
       icon: <BugReportIcon sx={{ fontSize: '2em' }} />,
     },
     {
-      name: 'Critical Thinking',
+      name: 'Node Js || Express Js || ',
+      icon: <EmojiObjectsIcon sx={{ fontSize: '2em' }} />,
+    },
+
+    {
+        name: 'SQL || MYSQL || POSTGRESQL || MONGODB',
+        icon: <EmojiObjectsIcon sx={{ fontSize: '2em' }} />,
+    },
+    {
+      name: 'API INTEGRATION || WEB HOSTING || ETC',
       icon: <EmojiObjectsIcon sx={{ fontSize: '2em' }} />,
     },
   ];

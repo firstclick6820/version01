@@ -20,7 +20,8 @@ import TechnicalSkillsCard from '../Cards/TechnicalSkillsCard';
 import { 
   frontendSkills, 
   backendSkills, 
-  softSkills 
+  softSkills,
+  generalSkills
 } from '../../assets/constant/data';
 
 
@@ -47,7 +48,17 @@ export default function SkillsTab() {
 
 
       <TabPanel value={value} index={0}>
-          {softSkills && <SoftSkillsCard title="Soft Skills" skills={softSkills} /> }
+          
+
+          <Grid container spacing={1}>
+            <Grid item  xs={12} sm={6}>
+            {softSkills && <SoftSkillsCard title="Soft Skills" skills={softSkills} /> }
+            </Grid>
+
+            <Grid item  xs={12} sm={6}>
+              {generalSkills && <TechnicalSkillsCard title="General Skills" skills={generalSkills} /> }
+            </Grid>
+        </Grid>
       </TabPanel>
 
 
